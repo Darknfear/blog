@@ -1,5 +1,5 @@
-import dotenv from 'dotenv';
-dotenv.config();
+import 'reflect-metadata';
+import 'dotenv/config';
 import app from './src/app';
 
 app.listen(process.env.PORT, () => {

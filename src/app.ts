@@ -3,6 +3,8 @@ import bodyParser from 'body-parser';
 
 //
 import router from './routes';
+import DB from "./database/database";
+import { join } from 'path';
 
 //init app
 const app = express();
@@ -11,8 +13,17 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-//routes
-app.use('/apis', router);
+//init db
+
+
+DB.initialize()
+  .then(() => {
+    DB.runMigrations();
+    //routes
+    app.use("/apis", router);
+  })
+  .catch((error) => console.log(error));
+
 
 
 export default app;

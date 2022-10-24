@@ -1,5 +1,4 @@
-import dotenv from 'dotenv';
-dotenv.config();
+import 'dotenv/config';
 
 export default {
   SALT: Number(process.env.SALT) || 10,
