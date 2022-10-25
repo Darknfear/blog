@@ -8,10 +8,11 @@
     "start:dev": "nodemon ./server.ts",
     "start:watch": "concurrently \"npx tsc --watch\" \"nodemon ./server.ts\"",
     "start:prod": "node ./dist/server.js",
-    "typeorm": "typeorm-ts-node-commonjs -d ./src/database/database.ts",
-    "typeorm2": "typeorm-ts-node-commonjs",
-    "typeorm:generate": "yarn typeorm migration:generate",
-    "typeorm:run": "npx typeorm-ts-node-commonjs migration:run"
+    "typeorm:generate": "yarn typeorm-ts-node-commonjs -d src/database/database.ts migration:generate",
+    "typeorm:create": "yarn typeorm-ts-node-commonjs migration:create",
+    "typeorm:show": "yarn typeorm-ts-node-commonjs migration:show -d src/database/database.ts",
+    "typeorm:run": "yarn typeorm-ts-node-commonjs migration:run -d src/database/database.ts",
+    "typeorm:revert": "yarn typeorm-ts-node-commonjs migration:revert -d src/database/database.ts"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",

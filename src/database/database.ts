@@ -1,5 +1,4 @@
-import { join } from 'path';
-import { DataSource, DataSourceOptions } from 'typeorm';
+import { DataSource } from 'typeorm';
 import dbOptions from "../config/database.config";
 
 class DBContext extends DataSource {
