@@ -1,17 +1,23 @@
 import BaseEntity from "../base/entity.base";
 import { Entity, Column } from "typeorm";
 
-@Entity({ name: 'users' })
+@Entity({ name: "users" })
 export default class User extends BaseEntity {
-  @Column({ name: 'first_name' })
+  @Column({ name: "email" })
+  email: string;
+
+  @Column({ name: "password" })
+  password: string;
+
+  @Column({ name: "first_name", nullable: true })
   firstName: string;
 
-  @Column({ name: 'last_name' })
+  @Column({ name: "last_name", nullable: true })
   lastName: string;
 
-  @Column({ name: 'phone' })
+  @Column({ name: "phone", nullable: true })
   phone: string;
 
-  @Column({ name: 'age' })
+  @Column({ name: "age", nullable: true })
   age: number;
 }
