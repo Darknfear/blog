@@ -1,4 +1,4 @@
-import { hash } from 'bcrypt';
+import { hash, compare } from 'bcrypt';
 import AuthConfig from '../../config/auth.config';
 
 export const encrypt = async (password: string): Promise<string> => {
@@ -6,4 +6,5 @@ export const encrypt = async (password: string): Promise<string> => {
   return hashString;
 }
 
-export const decrypt = async () => {}
+export const decrypt = async (planStr: string, hashStr: string) =>
+  await compare(planStr, hashStr);
