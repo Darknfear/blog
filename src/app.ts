@@ -4,7 +4,6 @@ import bodyParser from 'body-parser';
 //
 import router from './routes';
 import DB from "./database/database";
-import { join } from 'path';
 
 //init app
 const app = express();

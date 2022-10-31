@@ -5,8 +5,12 @@ export default class AuthController {
   constructor() {
     this.service = new AuthService();
     this.register = this.register.bind(this);
+    this.login = this.login.bind(this);
   }
-  async login() {}
+  async login(req: Request, res: Response) {
+    const { email, password } = req.body;
+    return res.json(await this.service.login({ email, password }));
+  }
 
   async register(req: Request, res: Response) {
     // try {
