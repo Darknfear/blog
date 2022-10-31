@@ -13,12 +13,6 @@ export default class AuthController {
   }
 
   async register(req: Request, res: Response) {
-    // try {
-    //   console.log(this);
-    // } catch (error) {
-    //   console.log(error);
-    // }
-    // console.log(this.service)
     const { email, password } = req.body;
     return res.json(await this.service.create({email, password}));
   }
