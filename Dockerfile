@@ -4,16 +4,16 @@ EXPOSE 3000
 
 WORKDIR /app
 
-COPY ./server.ts ./
+COPY ./server.ts .
 
-COPY ./src ./
+COPY ./src .
 
-COPY ./tsconfig.json ./
+COPY ./tsconfig.json .
 
-COPY ./package.json ./
+COPY ./package.json .
 
-# COPY [".env"]
+COPY . .
 
 RUN npm i
 
-CMD ["npm", "run", "start:prod"]
+CMD ["npm", "run", "start:dev"]
