@@ -1,6 +1,6 @@
 import User from "../common/entities/user.entity";
-import { DataSource, Repository } from "typeorm";
-import { genToken } from "../common/utils/auth";
+import { Repository } from "typeorm";
+import { genToken } from "../common/auth/jwt";
 import DBContext from "../database/database";
 import { encrypt, decrypt } from "../common/utils/hashing";
 
