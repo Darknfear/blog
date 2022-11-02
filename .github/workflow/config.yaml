@@ -1,0 +1,12 @@
+name: api-work-flow
+on:
+  push:
+    branches: [main, master, develop]
+
+jobs:
+  docker: #name job
+    runs-on: ubuntu-latest # env run job
+    setups:
+      - name: Checkout
+        uses: actions/checkout@v2
+
