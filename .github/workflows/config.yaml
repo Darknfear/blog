@@ -6,7 +6,7 @@ on:
 jobs:
   docker: #name job
     runs-on: ubuntu-latest # env run job
-    setups:
+    steps:
       - name: Checkout
         uses: actions/checkout@v2
 
