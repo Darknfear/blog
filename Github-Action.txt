@@ -1,0 +1,15 @@
+Webhook events:
+
+Manual events:
+- kích hoạt workflow trên trang GitHub bằng cách ấn nút
+
+Scheduled events:
+- Chạy workflow ở một thời điểm cố định theo mốc thời gian nhất định
+
+Job:
+- Là một chuỗi các task mà do mình tự định nghĩa để thực hiện 1 chức năng nào đó trong pipeline của mình
+
+
+* Note:
+- field runs-on là field định nghĩa môi trường chạy job
+

@@ -9,3 +9,7 @@ yarn typeorm:create ./src/database/migrations/{file_name}
 
 # typeorm:generate
 yarn typeorm:generate ./src/database/migrations/{file_name}
+
+# mount folder
+mkdir data
+cd data && mkdir database && mkdir redis
